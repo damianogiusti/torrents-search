@@ -8,5 +8,5 @@ pipelines:
           script:
             - gradle clean build shadowJar
             # Format the file like `torrents-search-1.0.0-20190222-215536.jar`
-            - mv build/libs/home.jar build/libs/home-$BITBUCKET_TAG-$(date +"%Y%m%d-%H%M%S").jar
-            - curl -X POST "https://${ACCESS_TOKEN}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"$(ls build/libs/torrents-search-*.jar)"
+            - mv $(ls build/libs/*.jar) build/libs/$BITBUCKET_REPO_SLUG-$BITBUCKET_TAG-$(date +"%Y%m%d-%H%M%S").jar
+            - curl -X POST "https://${ACCESS_TOKEN}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"$(ls build/libs/$BITBUCKET_REPO_SLUG-*.jar)"
