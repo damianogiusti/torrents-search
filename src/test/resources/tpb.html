@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Pirate Bay - The galaxy's most resilient bittorrent site</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml"
+          title="Search The Pirate Bay"/>
+    <link rel="stylesheet" type="text/css" href="//thepiratebay.org/static/css/pirate6.css"/>
+    <link rel="dns-prefetch" href="//syndication.exoclick.com/">
+    <link rel="dns-prefetch" href="//main.exoclick.com/">
+    <link rel="dns-prefetch" href="//static-ssl.exoclick.com/">
+    <link rel="dns-prefetch" href="//2468.go2cloud.org">
+    <link rel="dns-prefetch" href="//protect-your-privacy.net">
+    <link rel="dns-prefetch" href="//anonymous-net.com">
+    <link rel="dns-prefetch" href="//ads.exosrv.com">
+    <link rel="dns-prefetch" href="//s3.amazonaws.com">
+    <link rel="dns-prefetch" href="//traffic.adxprtz.com">
+    <link rel="canonical" href="//thepiratebay.org/search/foo%20fighters"/>
+    <style type="text/css">
+        .searchBox {
+            margin: 6px;
+            width: 300px;
+            vertical-align: middle;
+            padding: 2px;
+            background-image: url('//thepiratebay.org/static/img/icon-https.gif');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        .detLink {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        .detDesc {
+            color: #4e5456;
+        }
+
+        .detDesc a:hover {
+            color: #000099;
+            text-decoration: underline;
+        }
+
+        .sortby {
+            text-align: left;
+            float: left;
+        }
+
+        .detName {
+            padding-top: 3px;
+            padding-bottom: 2px;
+        }
+
+        .viewswitch {
+            font-style: normal;
+            float: right;
+            text-align: right;
+            font-weight: normal;
+        }
+    </style>
+    <script src="//thepiratebay.org/static/js/jquery.min.js" type="text/javascript"></script>
+    <script src="//thepiratebay.org/static/js/tpb.js" type="text/javascript"></script>
+    <meta name="description"
+          content="Search for and download any torrent from the pirate bay using search query foo fighters. Direct download via magnet link."/>
+    <meta name="keywords" content="foo fighters direct download torrent magnet tpb piratebay search"/>
+
+    <script language="javascript" type="text/javascript">if (top.location != self.location) {
+        top.location.replace(self.location);
+    }</script>
+</head>
+
+<body>
+<div id="header">
+
+    <form method="get" id="q" action="/s/">
+        <a href="/" class="img"><img src="//thepiratebay.org/static/img/tpblogo_sm_ny.gif" id="TPBlogo"
+                                     alt="The Pirate Bay"/></a>
+        <b><a href="/" title="Search Torrents">Search Torrents</a></b>&nbsp;&nbsp;|&nbsp;
+        <a href="/browse" title="Browse Torrents">Browse Torrents</a>&nbsp;&nbsp;|&nbsp;
+        <a href="/recent" title="Recent Torrent">Recent Torrents</a>&nbsp;&nbsp;|&nbsp;
+        <a href="/tv/" title="TV shows">TV shows</a>&nbsp;&nbsp;|&nbsp;
+        <a href="/music" title="Music">Music</a>&nbsp;&nbsp;|&nbsp;
+        <a href="/top" title="Top 100">Top 100</a>
+        <br/><input type="search" class="inputbox" title="Pirate Search" name="q" placeholder="Search here..."
+                    value="foo fighters"/><input value="Pirate Search" type="submit" class="submitbutton"/><br/> <label
+            for="audio" title="Audio"><input id="audio" name="audio" onclick="javascript:rmAll();" type="checkbox"/>Audio</label>
+        <label for="video" title="Video"><input id="video" name="video" onclick="javascript:rmAll();" type="checkbox"/>Video</label>
+        <label for="apps" title="Applications"><input id="apps" name="apps" onclick="javascript:rmAll();"
+                                                      type="checkbox"/>Applications</label>
+        <label for="games" title="Games"><input id="games" name="games" onclick="javascript:rmAll();" type="checkbox"/>Games</label>
+        <label for="porn" title="Porn"><input id="porn" name="porn" onclick="javascript:rmAll();" type="checkbox"/>Porn</label>
+        <label for="other" title="Other"><input id="other" name="other" onclick="javascript:rmAll();" type="checkbox"/>Other</label>
+
+        <select id="category" name="category" onchange="javascript:setAll();">
+            <option value="0">All</option>
+            <optgroup label="Audio">
+                <option value="101">Music</option>
+                <option value="102">Audio books</option>
+                <option value="103">Sound clips</option>
+                <option value="104">FLAC</option>
+                <option value="199">Other</option>
+            </optgroup>
+            <optgroup label="Video">
+                <option value="201">Movies</option>
+                <option value="202">Movies DVDR</option>
+                <option value="203">Music videos</option>
+                <option value="204">Movie clips</option>
+                <option value="205">TV shows</option>
+                <option value="206">Handheld</option>
+                <option value="207">HD - Movies</option>
+                <option value="208">HD - TV shows</option>
+                <option value="209">3D</option>
+                <option value="299">Other</option>
+            </optgroup>
+            <optgroup label="Applications">
+                <option value="301">Windows</option>
+                <option value="302">Mac</option>
+                <option value="303">UNIX</option>
+                <option value="304">Handheld</option>
+                <option value="305">IOS (iPad/iPhone)</option>
+                <option value="306">Android</option>
+                <option value="399">Other OS</option>
+            </optgroup>
+            <optgroup label="Games">
+                <option value="401">PC</option>
+                <option value="402">Mac</option>
+                <option value="403">PSx</option>
+                <option value="404">XBOX360</option>
+                <option value="405">Wii</option>
+                <option value="406">Handheld</option>
+                <option value="407">IOS (iPad/iPhone)</option>
+                <option value="408">Android</option>
+                <option value="499">Other</option>
+            </optgroup>
+            <optgroup label="Porn">
+                <option value="501">Movies</option>
+                <option value="502">Movies DVDR</option>
+                <option value="503">Pictures</option>
+                <option value="504">Games</option>
+                <option value="505">HD - Movies</option>
+                <option value="506">Movie clips</option>
+                <option value="599">Other</option>
+            </optgroup>
+            <optgroup label="Other">
+                <option value="601">E-books</option>
+                <option value="602">Comics</option>
+                <option value="603">Pictures</option>
+                <option value="604">Covers</option>
+                <option value="605">Physibles</option>
+                <option value="699">Other</option>
+            </optgroup>
+        </select>
+
+        <input type="hidden" name="page" value="0"/>
+        <input type="hidden" name="orderby" value="99"/>
+    </form>
+</div><!-- // div:header -->
+
+<h2><span>Search results: foo fighters</span>&nbsp;Displaying hits from 0 to 30 (approx 463 found)</h2>
+
+<div id="SearchResults">
+    <div id="content">
+        <div id="sky-right">
+            <iframe src="//thepiratebay.org/static/si0Eim0u/exo_na/sky2.html" width="160" height="600" frameborder="0"
+                    scrolling="no"></iframe>
+        </div>
+
+        <iframe src="//thepiratebay.org/static/si0Eim0u/exo_na/center.html" id="sky-center" width="728" height="90"
+                frameborder="0" scrolling="no"></iframe>
+        <div id="main-content">
+            <table id="searchResult">
+                <thead id="tableHead">
+                <tr class="header">
+                    <th><a href="/search/foo%20fighters/0/13/0" title="Order by Type">Type</a></th>
+                    <th>
+                        <div class="sortby"><a href="/search/foo%20fighters/0/1/0" title="Order by Name">Name</a> (Order
+                            by: <a href="/search/foo%20fighters/0/3/0" title="Order by Uploaded">Uploaded</a>, <a
+                                    href="/search/foo%20fighters/0/5/0" title="Order by Size">Size</a>, <span
+                                    style="white-space: nowrap;"><a href="/search/foo%20fighters/0/11/0"
+                                                                    title="Order by ULed by">ULed by</a></span>, <a
+                                    href="/search/foo%20fighters/0/8/0" title="Order by Seeders">SE</a>, <a
+                                    href="/search/foo%20fighters/0/9/0" title="Order by Leechers">LE</a>)
+                        </div>
+                        <div class="viewswitch"> View: <a href="/switchview.php?view=s">Single</a> / Double&nbsp;</div>
+                    </th>
+                    <th><abbr title="Seeders"><a href="/search/foo%20fighters/0/8/0"
+                                                 title="Order by Seeders">SE</a></abbr></th>
+                    <th><abbr title="Leechers"><a href="/search/foo%20fighters/0/9/0"
+                                                  title="Order by Leechers">LE</a></abbr></th>
+                </tr>
+                </thead>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/11440076/Foo_Fighters_Discography_1995_-_2014_(P.a.I.D.)"
+                                                class="detLink"
+                                                title="Details for Foo Fighters Discography 1995 - 2014 (P.a.I.D.)">Foo
+                            Fighters Discography 1995 - 2014 (P.a.I.D.)</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:3ba768e167fb173b7e4e3777e06d2afc4f460643&dn=Foo+Fighters+Discography+1995+-+2014+%28P.a.I.D.%29&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 11-12&nbsp;2014, Size 1.06&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/therealrawofbaycity/"
+                                                                                                       title="Browse therealrawofbaycity">therealrawofbaycity</a></font>
+                    </td>
+                    <td align="right">84</td>
+                    <td align="right">13</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/17846492/Foo_Fighters_-_Run_[2017-Single]"
+                                                class="detLink" title="Details for Foo Fighters - Run [2017-Single]">Foo
+                            Fighters - Run [2017-Single]</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:abb9de28f14cafe0607457c49f8b1a014cc79cdd&dn=Foo+Fighters+-+Run+%5B2017-Single%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/palahubog"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP"
+                                                        title="VIP" style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 06-02&nbsp;2017, Size 12.55&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                        href="/user/palahubog/"
+                                                                                                        title="Browse palahubog">palahubog</a></font>
+                    </td>
+                    <td align="right">27</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/205" title="More from this category">TV shows</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/11658178/Foo_Fighters_Sonic_Highways_Complete_Series"
+                                                class="detLink"
+                                                title="Details for Foo Fighters Sonic Highways Complete Series">Foo
+                            Fighters Sonic Highways Complete Series</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:2dec4451c6bdfbfef7ff63fd060ec1ba076dbd85&dn=Foo+Fighters+Sonic+Highways+Complete+Series&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 12-07&nbsp;2014, Size 3.46&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/lg95/"
+                                                                                                       title="Browse lg95">lg95</a></font>
+                    </td>
+                    <td align="right">15</td>
+                    <td align="right">4</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/6653905/Foo_Fighters_The_Colour_And_The_Shape_320_Kbps"
+                                                class="detLink"
+                                                title="Details for Foo Fighters The Colour And The Shape 320 Kbps">Foo
+                            Fighters The Colour And The Shape 320 Kbps</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:0c5b0a3d3e139b28c03a108d3ee2232f65dc6b09&dn=Foo+Fighters+The+Colour+And+The+Shape+320+Kbps&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 2 comments."
+                            title="This torrent has 2 comments."/><img src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 09-05&nbsp;2011, Size 116.38&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/320hunter/"
+                                                                                                         title="Browse 320hunter">320hunter</a></font>
+                    </td>
+                    <td align="right">11</td>
+                    <td align="right">2</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/104" title="More from this category">FLAC</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/7497899/FOO_FIGHTERS_Discography_FLAC" class="detLink"
+                                                title="Details for FOO FIGHTERS Discography FLAC">FOO FIGHTERS
+                            Discography FLAC</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:20a869c973e6f7f5c2cce2a330f3c2ca9aa085c2&dn=FOO+FIGHTERS+Discography+FLAC&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 7 comments."
+                            title="This torrent has 7 comments."/><a href="/user/rjordan21"><img
+                            src="//thepiratebay.org/static/img/trusted.png" alt="Trusted" title="Trusted"
+                            style="width:11px;" border='0'/></a>
+                        <font class="detDesc">Uploaded 08-02&nbsp;2012, Size 2.71&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/rjordan21/"
+                                                                                                       title="Browse rjordan21">rjordan21</a></font>
+                    </td>
+                    <td align="right">11</td>
+                    <td align="right">2</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/11402266/Foo.Fighters-Sonic.Highways.Mp3.320kbps-2014"
+                                                class="detLink"
+                                                title="Details for Foo.Fighters-Sonic.Highways.Mp3.320kbps-2014">Foo.Fighters-Sonic.Highways.Mp3.320kbps-2014</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:685322ca130f4c4b768209756913e679106f4631&dn=Foo.Fighters-Sonic.Highways.Mp3.320kbps-2014&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 4 comments."
+                            title="This torrent has 4 comments."/><img src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 11-08&nbsp;2014, Size 103.95&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/50XTPB/"
+                                                                                                         title="Browse 50XTPB">50XTPB</a></font>
+                    </td>
+                    <td align="right">11</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/203" title="More from this category">Music videos</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/18552064/Foo_Fighters_-_2009-11-27_-_VH1_Storytellers"
+                                                class="detLink"
+                                                title="Details for Foo Fighters - 2009-11-27 - VH1 Storytellers">Foo
+                            Fighters - 2009-11-27 - VH1 Storytellers</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:fb30d5d5240de148347e86c9283ad6a94391b53c&dn=Foo+Fighters+-+2009-11-27+-+VH1+Storytellers&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/GRNS3"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP"
+                                                    style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 09-09&nbsp;2017, Size 1.98&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/GRNS3/"
+                                                                                                       title="Browse GRNS3">GRNS3</a></font>
+                    </td>
+                    <td align="right">10</td>
+                    <td align="right">4</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/18580223/Foo_Fighters_-_Concrete_and_Gold_(2017)_(Mp3_320kbps)_[Hunter]"
+                                class="detLink"
+                                title="Details for Foo Fighters - Concrete and Gold (2017) (Mp3 320kbps) [Hunter]">Foo
+                            Fighters - Concrete and Gold (2017) (Mp3 320kbps) [Hunter]</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:a3de0aea945004d7e7865632c6f64c9de66b0aed&dn=Foo+Fighters+-+Concrete+and+Gold+%282017%29+%28Mp3+320kbps%29+%5BHunter%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/kajalsus"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP"
+                                                       style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 09-13&nbsp;2017, Size 111.58&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/kajalsus/"
+                                                                                                         title="Browse kajalsus">kajalsus</a></font>
+                    </td>
+                    <td align="right">10</td>
+                    <td align="right">5</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/199" title="More from this category">Other</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/8950715/Foo_Fighters__ndash__Greatest_Hits_2009_only1joe_320kbsMP3"
+                                class="detLink"
+                                title="Details for Foo Fighters &ndash; Greatest Hits 2009 only1joe 320kbsMP3">Foo
+                            Fighters &ndash; Greatest Hits 2009 only1joe 320kbsMP3</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:e668355a44345ad92a1d29ec7024a48278c69c74&dn=Foo+Fighters+%26ndash%3B+Greatest+Hits+2009+only1joe+320kbsMP3&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 2 comments."
+                            title="This torrent has 2 comments."/><a href="/user/only1joe"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 09-22&nbsp;2013, Size 159.59&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/only1joe/"
+                                                                                                         title="Browse only1joe">only1joe</a></font>
+                    </td>
+                    <td align="right">9</td>
+                    <td align="right">1</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/203" title="More from this category">Music videos</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/19334399/Foo_Fighters_-_2012_-_Live_At_Lollapalooza_Brasil_-_HD_1080i"
+                                class="detLink"
+                                title="Details for Foo Fighters - 2012 - Live At Lollapalooza Brasil - HD 1080i">Foo
+                            Fighters - 2012 - Live At Lollapalooza Brasil - HD 1080i</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:43fb1566d217db1a89d589ff10ec76e4ee9c229c&dn=Foo+Fighters+-+2012+-+Live+At+Lollapalooza+Brasil+-+HD+1080i&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments."
+                            title="This torrent has 1 comments."/><a href="/user/GRNS3"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 12-13&nbsp;2017, Size 11.68&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                        href="/user/GRNS3/"
+                                                                                                        title="Browse GRNS3">GRNS3</a></font>
+                    </td>
+                    <td align="right">9</td>
+                    <td align="right">2</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/201" title="More from this category">Movies</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/6516125/Foo.Fighters.Back.and.Forth.2011.DVDRip.XviD.avi"
+                                                class="detLink"
+                                                title="Details for Foo.Fighters.Back.and.Forth.2011.DVDRip.XviD.avi">Foo.Fighters.Back.and.Forth.2011.DVDRip.XviD.avi</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:0ddb995f066a3deee5c601e8c5574a946e949cb2&dn=Foo.Fighters.Back.and.Forth.2011.DVDRip.XviD.avi&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments."
+                            title="This torrent has 1 comments."/><a href="/user/zaq2qaz"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 07-05&nbsp;2011, Size 700.25&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/zaq2qaz/"
+                                                                                                         title="Browse zaq2qaz">zaq2qaz</a></font>
+                    </td>
+                    <td align="right">8</td>
+                    <td align="right">1</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/6744879/Foo_Fighters_-_Greatest_Hits_2CD_(2007)_320_vtwin88cube"
+                                class="detLink"
+                                title="Details for Foo Fighters - Greatest Hits 2CD (2007) 320 vtwin88cube">Foo Fighters
+                            - Greatest Hits 2CD (2007) 320 vtwin88cube</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:45dc42cb2ae3f13610cfebfa75da55a8dd3c3f04&dn=Foo+Fighters+-+Greatest+Hits+2CD+%282007%29+320+vtwin88cube&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 9 comments."
+                            title="This torrent has 9 comments."/><a href="/user/vtwin88cube"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 10-15&nbsp;2011, Size 367.95&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/vtwin88cube/"
+                                                                                                         title="Browse vtwin88cube">vtwin88cube</a></font>
+                    </td>
+                    <td align="right">8</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/203" title="More from this category">Music videos</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/18879185/Foo_Fighters_-_2017-10-28_Voodoo_Music___Arts_Experience_1080p60"
+                                class="detLink"
+                                title="Details for Foo Fighters - 2017-10-28 Voodoo Music + Arts Experience 1080p60">Foo
+                            Fighters - 2017-10-28 Voodoo Music + Arts Experience 1080p60</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:46647ae1c6791772f1feee2d4deb03969e60b858&dn=Foo+Fighters+-+2017-10-28+Voodoo+Music+%2B+Arts+Experience+1080p60&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/GRNS3"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP"
+                                                    style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 10-30&nbsp;2017, Size 5.63&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/GRNS3/"
+                                                                                                       title="Browse GRNS3">GRNS3</a></font>
+                    </td>
+                    <td align="right">7</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/104" title="More from this category">FLAC</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/18579246/Foo_Fighters_Concrete_And_Gold_[2017]_FLAC_CD"
+                                                class="detLink"
+                                                title="Details for Foo Fighters Concrete And Gold [2017] FLAC CD">Foo
+                            Fighters Concrete And Gold [2017] FLAC CD</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:967ec2ba50a62c4222a25aafd52197816a48d42d&dn=Foo+Fighters+Concrete+And+Gold+%5B2017%5D+FLAC+CD&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 2 comments."
+                            title="This torrent has 2 comments."/><img src="//thepiratebay.org/static/img/vip.gif"
+                                                                       alt="VIP" title="VIP" style="width:11px;"
+                                                                       border='0'/>
+                        <font class="detDesc">Uploaded 09-13&nbsp;2017, Size 319.54&nbsp;MiB, ULed by
+                            <i>Anonymous</i></font>
+                    </td>
+                    <td align="right">6</td>
+                    <td align="right">4</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/104" title="More from this category">FLAC</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/18594494/Foo_Fighters_-_Concrete_And_Gold_(2017)_[24-44.1]"
+                                class="detLink" title="Details for Foo Fighters - Concrete And Gold (2017) [24-44.1]">Foo
+                            Fighters - Concrete And Gold (2017) [24-44.1]</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:61f8257e9480c88dde761ce1d43c42e8128e9984&dn=Foo+Fighters+-+Concrete+And+Gold+%282017%29+%5B24-44.1%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 2 comments."
+                            title="This torrent has 2 comments."/><img src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 09-15&nbsp;2017, Size 556.05&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/Freak0370/"
+                                                                                                         title="Browse Freak0370">Freak0370</a></font>
+                    </td>
+                    <td align="right">6</td>
+                    <td align="right">4</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/203" title="More from this category">Music videos</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/4622354/Foo_Fighters_-_Live_At_Wembley_Stadium.mkv"
+                                                class="detLink"
+                                                title="Details for Foo Fighters - Live At Wembley Stadium.mkv">Foo
+                            Fighters - Live At Wembley Stadium.mkv</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:1e2bb07c70f13dbf1d8cb5626a4995f319197527&dn=Foo+Fighters+-+Live+At+Wembley+Stadium.mkv&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 8 comments."
+                            title="This torrent has 8 comments."/><a href="/user/Askeen"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 01-04&nbsp;2009, Size 907.18&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/Askeen/"
+                                                                                                         title="Browse Askeen">Askeen</a></font>
+                    </td>
+                    <td align="right">5</td>
+                    <td align="right">1</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/203" title="More from this category">Music videos</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/4825011/Foo_Fighters_Live_At_The_Wembley_Stadium_--_ISO"
+                                                class="detLink"
+                                                title="Details for Foo Fighters Live At The Wembley Stadium -- ISO">Foo
+                            Fighters Live At The Wembley Stadium -- ISO</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:5589322945073436f3efed9adbef1cbb6ac39c08&dn=Foo+Fighters+Live+At+The+Wembley+Stadium+--+ISO&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments."
+                            title="This torrent has 1 comments."/><img src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 04-05&nbsp;2009, Size 7.5&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                      href="/user/SydMosh/"
+                                                                                                      title="Browse SydMosh">SydMosh</a></font>
+                    </td>
+                    <td align="right">5</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/203" title="More from this category">Music videos</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/7447269/Foo_Fighters_14-05-2011_-_BluRay_-_BBC_Radio_One_Big_Weekend"
+                                class="detLink"
+                                title="Details for Foo Fighters 14-05-2011 - BluRay - BBC Radio One Big Weekend">Foo
+                            Fighters 14-05-2011 - BluRay - BBC Radio One Big Weekend</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:7a1c7c7f34a1c303dc37c3ef7fab6f8620853c36&dn=Foo+Fighters+14-05-2011+-+BluRay+-+BBC+Radio+One+Big+Weekend&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/GRNS3"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP"
+                                                    style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 07-16&nbsp;2012, Size 22.25&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                        href="/user/GRNS3/"
+                                                                                                        title="Browse GRNS3">GRNS3</a></font>
+                    </td>
+                    <td align="right">5</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/11407246/Foo_Fighters__bull__Sonic_Highways_[2014]_320_CD"
+                                class="detLink" title="Details for Foo Fighters &bull; Sonic Highways [2014] 320 CD">Foo
+                            Fighters &bull; Sonic Highways [2014] 320 CD</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:25768476c8172b7745cf437a25e9c968cf56fe5d&dn=Foo+Fighters+%26bull%3B+Sonic+Highways+%5B2014%5D+320+CD&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments."
+                            title="This torrent has 1 comments."/><a href="/user/Capajebo"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 11-08&nbsp;2014, Size 103&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                      href="/user/Capajebo/"
+                                                                                                      title="Browse Capajebo">Capajebo</a></font>
+                    </td>
+                    <td align="right">5</td>
+                    <td align="right">1</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/104" title="More from this category">FLAC</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/15600625/Foo_Fighters_-_Skin_And_Bones_live_2006_[EAC-FLAC](oan)"
+                                class="detLink"
+                                title="Details for Foo Fighters - Skin And Bones live 2006 [EAC-FLAC](oan)">Foo Fighters
+                            - Skin And Bones live 2006 [EAC-FLAC](oan)</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:343d1bfef83c93f3b2221705df366942fbc74738&dn=Foo+Fighters+-+Skin+And+Bones+live+2006+%5BEAC-FLAC%5D%28oan%29&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments."
+                            title="This torrent has 1 comments."/><a href="/user/oneanight"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 08-19&nbsp;2016, Size 492.89&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/oneanight/"
+                                                                                                         title="Browse oneanight">oneanight</a></font>
+                    </td>
+                    <td align="right">5</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/18572853/Foo_Fighters_-_Concrete_and_Gold_2017_ak"
+                                                class="detLink"
+                                                title="Details for Foo Fighters - Concrete and Gold 2017 ak">Foo
+                            Fighters - Concrete and Gold 2017 ak</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:cca1bee065639a06eea1649599da528fe6328d1f&dn=Foo+Fighters+-+Concrete+and+Gold+2017+ak&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 4 comments."
+                            title="This torrent has 4 comments."/><a href="/user/analogkid6103"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 09-12&nbsp;2017, Size 128.8&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                        href="/user/analogkid6103/"
+                                                                                                        title="Browse analogkid6103">analogkid6103</a></font>
+                    </td>
+                    <td align="right">5</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/3261747/Foo_Fighters_-_Everlong_(acoustic)"
+                                                class="detLink" title="Details for Foo Fighters - Everlong (acoustic)">Foo
+                            Fighters - Everlong (acoustic)</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:ff6b2c6fed0d1fb7a051ab18b7df2d9bf5b4ef52&dn=Foo+Fighters+-+Everlong+%28acoustic%29&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 3 comments."
+                            title="This torrent has 3 comments."/><img src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 12-02&nbsp;2004, Size 3.5&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                      href="/user/koshet/"
+                                                                                                      title="Browse koshet">koshet</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/3279915/Foo_Fighters_-_One_by_One" class="detLink"
+                                                title="Details for Foo Fighters - One by One">Foo Fighters - One by
+                            One</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:eb1746b4f8a26186c570d356aff47b48c4a24bb0&dn=Foo+Fighters+-+One+by+One&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 2 comments."
+                            title="This torrent has 2 comments."/><img src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 01-21&nbsp;2005, Size 79.7&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/chopsuey/"
+                                                                                                       title="Browse chopsuey">chopsuey</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/3322730/Foo_Fighters-In_Your_Honor-Best_Of_You"
+                                                class="detLink"
+                                                title="Details for Foo Fighters-In Your Honor-Best Of You">Foo
+                            Fighters-In Your Honor-Best Of You</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:7d610615ff19fc92bf4ac9c25997f5d31f669554&dn=Foo+Fighters-In+Your+Honor-Best+Of+You&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 1 comments."
+                            title="This torrent has 1 comments."/><img src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 04-28&nbsp;2005, Size 9.78&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/vpbpi/"
+                                                                                                       title="Browse vpbpi">vpbpi</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">0</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/5141459/Foo_Fighters_-_Greatest_Hits_CDRip_2009_[Cov_CD][Bubanee]"
+                                class="detLink"
+                                title="Details for Foo Fighters - Greatest Hits CDRip 2009 [Cov+CD][Bubanee]">Foo
+                            Fighters - Greatest Hits CDRip 2009 [Cov+CD][Bubanee]</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:eb3fefa135584789281f3372affa8b1a7cbedb2e&dn=Foo+Fighters+-+Greatest+Hits+CDRip+2009+%5BCov%2BCD%5D%5BBubanee%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 33 comments."
+                            title="This torrent has 33 comments."/><a href="/user/bubanee"><img
+                            src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP" style="width:11px;"
+                            border='0'/></a>
+                        <font class="detDesc">Uploaded 10-31&nbsp;2009, Size 127.81&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/bubanee/"
+                                                                                                         title="Browse bubanee">bubanee</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">1</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/199" title="More from this category">Other</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/8006941/Foo_Fighters_-_Discography_(1995-2006)_[Flac]_Alternative_Rock_G"
+                                class="detLink"
+                                title="Details for Foo Fighters - Discography (1995-2006) [Flac] Alternative Rock G">Foo
+                            Fighters - Discography (1995-2006) [Flac] Alternative Rock G</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:a2a4d82bbb26bc778fb12b8d81feff77486f7bda&dn=Foo+Fighters+-+Discography+%281995-2006%29+%5BFlac%5D+Alternative+Rock+G&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/l.diliberto"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP"
+                                                          title="VIP" style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 01-11&nbsp;2013, Size 2.41&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/l.diliberto/"
+                                                                                                       title="Browse l.diliberto">l.diliberto</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">2</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/104" title="More from this category">FLAC</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/8010667/Foo_Fighters_Collection_(1995-2011)_[FLAC]"
+                                                class="detLink"
+                                                title="Details for Foo Fighters Collection (1995-2011) [FLAC]">Foo
+                            Fighters Collection (1995-2011) [FLAC]</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:13164a99b689f4187d850a129f6511f23ae8e078&dn=Foo+Fighters+Collection+%281995-2011%29+%5BFLAC%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><img
+                            src="//thepiratebay.org/static/img/icon_comment.gif" alt="This torrent has 3 comments."
+                            title="This torrent has 3 comments."/><a href="/user/gatasalvaje"><img
+                            src="//thepiratebay.org/static/img/trusted.png" alt="Trusted" title="Trusted"
+                            style="width:11px;" border='0'/></a>
+                        <font class="detDesc">Uploaded 01-12&nbsp;2013, Size 15.1&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                       href="/user/gatasalvaje/"
+                                                                                                       title="Browse gatasalvaje">gatasalvaje</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">3</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/104" title="More from this category">FLAC</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/11399533/Foo_Fighters_-_Sonic_Highways_(2014)_[FLAC]"
+                                                class="detLink"
+                                                title="Details for Foo Fighters - Sonic Highways (2014) [FLAC]">Foo
+                            Fighters - Sonic Highways (2014) [FLAC]</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:0b7da2bd6e3b0e4c23c4dae004108c93dae0e5d6&dn=Foo+Fighters+-+Sonic+Highways+%282014%29+%5BFLAC%5D&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/politux"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP" title="VIP"
+                                                      style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 11-08&nbsp;2014, Size 288.98&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                         href="/user/politux/"
+                                                                                                         title="Browse politux">politux</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">1</td>
+                </tr>
+                <tr>
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/200" title="More from this category">Video</a><br/>
+                            (<a href="/browse/299" title="More from this category">Other</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a href="/torrent/17998033/Glastonbury_2017_Day_2_Foo_Fighters"
+                                                class="detLink" title="Details for Glastonbury 2017 Day 2 Foo Fighters">Glastonbury
+                            2017 Day 2 Foo Fighters</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:c7db5e37fb35297fc554d7b72bbb6d8e6e1aa682&dn=Glastonbury+2017+Day+2+Foo+Fighters&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/RoaElson"><img src="//thepiratebay.org/static/img/trusted.png" alt="Trusted"
+                                                       title="Trusted" style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 06-25&nbsp;2017, Size 4&nbsp;GiB, ULed by <a class="detDesc"
+                                                                                                    href="/user/RoaElson/"
+                                                                                                    title="Browse RoaElson">RoaElson</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">3</td>
+                </tr>
+                <tr class="alt">
+                    <td class="vertTh">
+                        <center>
+                            <a href="/browse/100" title="More from this category">Audio</a><br/>
+                            (<a href="/browse/101" title="More from this category">Music</a>)
+                        </center>
+                    </td>
+                    <td>
+                        <div class="detName"><a
+                                href="/torrent/18479315/Foo_Fighters_-_Gloria_Theater_(Live_2-CD)_2011_320ak"
+                                class="detLink"
+                                title="Details for Foo Fighters - Gloria Theater (Live 2-CD) 2011 320ak">Foo Fighters -
+                            Gloria Theater (Live 2-CD) 2011 320ak</a>
+                        </div>
+                        <a href="magnet:?xt=urn:btih:53f45178c9c0b9a8482981a22f15f1ac2e5968ef&dn=Foo+Fighters+-+Gloria+Theater+%28Live+2-CD%29+2011+320ak&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969"
+                           title="Download this torrent using magnet"><img
+                                src="//thepiratebay.org/static/img/icon-magnet.gif" alt="Magnet link"/></a><a
+                            href="/user/analogkid6103"><img src="//thepiratebay.org/static/img/vip.gif" alt="VIP"
+                                                            title="VIP" style="width:11px;" border='0'/></a><img
+                            src="//thepiratebay.org/static/img/11x11p.png"/>
+                        <font class="detDesc">Uploaded 08-26&nbsp;2017, Size 221.5&nbsp;MiB, ULed by <a class="detDesc"
+                                                                                                        href="/user/analogkid6103/"
+                                                                                                        title="Browse analogkid6103">analogkid6103</a></font>
+                    </td>
+                    <td align="right">4</td>
+                    <td align="right">3</td>
+                </tr>
+
+            </table>
+        </div>
+        <div align="center">1&nbsp;<a href="/search/foo fighters/1/7//">2</a>&nbsp;<a href="/search/foo fighters/2/7//">3</a>&nbsp;<a
+                href="/search/foo fighters/3/7//">4</a>&nbsp;<a href="/search/foo fighters/4/7//">5</a>&nbsp;<a
+                href="/search/foo fighters/5/7//">6</a>&nbsp;<a href="/search/foo fighters/6/7//">7</a>&nbsp;<a
+                href="/search/foo fighters/7/7//">8</a>&nbsp;<a href="/search/foo fighters/8/7//">9</a>&nbsp;<a
+                href="/search/foo fighters/9/7//">10</a>&nbsp;<a href="/search/foo fighters/10/7//">11</a>&nbsp;<a
+                href="/search/foo fighters/11/7//">12</a>&nbsp;<a href="/search/foo fighters/12/7//">13</a>&nbsp;<a
+                href="/search/foo fighters/13/7//">14</a>&nbsp;<a href="/search/foo fighters/14/7//">15</a>&nbsp;<a
+                href="/search/foo fighters/15/7//">16</a>&nbsp;<a href="/search/foo fighters/1/7//"><img
+                src="//thepiratebay.org/static/img/next.gif" border="0" alt="Next"/></a>&nbsp;
+        </div>
+        <div class="ads" id="sky-banner">
+            <iframe src="//thepiratebay.org/static/si0Eim0u/exo_na/sky1.html" width="120" height="600" frameborder="0"
+                    scrolling="no"></iframe>
+        </div>
+        <script type="text/javascript" src="//thepiratebay.org/static/si0Eim0u/ad-scroll.js"></script>
+    </div>
+</div>
+</div><!-- //div:content -->
+
+<div id="foot" style="text-align:center;margin-top:1em;">
+
+    <iframe src="//thepiratebay.org/static/si0Eim0u/exo_na/bottom.html" width="728" height="90" frameborder="0"
+            scrolling="no"></iframe>
+    <p>
+        <a href="/login" title="Login">Login</a> |
+        <a href="/register" title="Register">Register</a> |
+        <a href="/language" title="Select language">Language / Select language</a> |
+        <a href="/about" title="About">About</a> |
+        <a href="/blog" title="Blog">Blog</a>
+        <br/>
+        <!--<a href="/contact" title="Contact us">Contact us</a> |-->
+        <a href="/policy" title="Usage policy">Usage policy</a> |
+        <a href="http://uj3wazyk5u4hnvtk.onion" title="TOR">TOR</a> |
+        <a href="/doodles" title="Doodles">Doodles</a> |
+        <a href="http://pirates-forum.org/" title="Forum" target="_blank">Forum</a>
+        <br/>
+    </p>
+
+    <br/><a href="http://bitcoin.org" target="_NEW">BTC</a>: <b>3HcEB6bi4TFPdvk31Pwz77DwAzfAZz2fMn</b><br/><a
+        href="http://bitcoin.org" target="_NEW">BTC (Bech32)</a>: <b>bc1q9x30z7rz52c97jwc2j79w76y7l3ny54nlvd4ew</b><br/><a
+        href="http://litecoin.org" target="_NEW">LTC</a>: <b>LS78aoGtfuGCZ777x3Hmr6tcoW3WaYynx9</b><br/><a
+        href="http://getmonero.org" target="_NEW">XMR</a>: <b>46E5ekYrZd5UCcmNuYEX24FRjWVMgZ1ob79cRViyfvLFZjfyMhPDvbuCe54FqLQvVCgRKP4UUMMW5fy3ZhVQhD1JLLufBtu</b><br/><a
+        href="http://bitcoin.org" target="_NEW">BCH</a>: <b>Bcash. LOL</b><br/><br/>
+
+    <div id="fbanners">
+        <a href="/rss" class="rss" title="RSS"><img src="//thepiratebay.org/static/img/rss_small.gif" alt="RSS"/></a>
+    </div><!-- // div:fbanners -->
+</div><!-- // div:foot -->
+
+
+<script>
+    var _wm_settings = {
+        popunder: {
+            url: 'https://traffic.adxprtz.com/?placement=289748&redirect',
+            times: 2,
+            hours: 12.000000,
+            cookie: 'tpbpop',
+            fastbind: true
+        }
+    };
+    var _wm = {
+        initialize: function () {
+            this.ua.initialize()
+        }, array: {
+            is_array: function (a) {
+                return Object.prototype.toString.call(a) === '[object Array]'
+            }, sort: function (a, b, c) {
+                a = a.sort();
+                if (b) a = a.reverse();
+                if (c) {
+                    for (var i = 0; i < a.length; i++) {
+                        var d = a[i];
+                        if (Object.prototype.toString.call(d) === '[object Object]') d = _wm.object.sort(d, b, true); else if (Object.prototype.toString.call(d) === '[object Array]') d = _wm.array.sort(d, b, true);
+                        a[i] = d
+                    }
+                }
+                return a
+            }, random_value: function (a) {
+                return a[Math.floor(a.length * Math.random())]
+            }
+        }, object: {
+            is_object: function (a) {
+                return Object.prototype.toString.call(a) === '[object Object]'
+            }, keys: function (a) {
+                var hasOwnProperty = Object.prototype.hasOwnProperty,
+                    hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString'),
+                    dontEnums = ['toString', 'toLocaleString', 'valueOf', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable', 'constructor'],
+                    dontEnumsLength = dontEnums.length;
+                var b = [];
+                if (typeof a !== 'object' && typeof a !== 'function' || a === null) return b;
+                for (var c in a) {
+                    if (hasOwnProperty.call(a, c)) b.push(c)
+                }
+                if (hasDontEnumBug) {
+                    for (var i = 0; i < dontEnumsLength; i++) {
+                        if (hasOwnProperty.call(a, dontEnums[i])) b.push(dontEnums[i])
+                    }
+                }
+                return b
+            }, sort: function (a, c, d) {
+                var e = _wm.array.sort(_wm.object.keys(a));
+                if (c) e = e.reverse();
+                var b = {};
+                for (var i = 0; i < e.length; i++) {
+                    var f = a[e[i]];
+                    if (d) {
+                        if (_wm.object.is_object(f)) f = _wm.object.sort(f, c, true); else if (_wm.array.is_array(f)) f = _wm.array.sort(f, c, true)
+                    }
+                    b[e[i]] = f
+                }
+                return b
+            }, iterator: function (b) {
+                this.element = b;
+                this.element_array = _wm.object.keys(b);
+                this.current_index = 0;
+                this.hasNext = function () {
+                    return this.current_index <= this.element_array.length - 1
+                };
+                this.next = function () {
+                    if (this.hasNext()) {
+                        var a = [this.element_array[this.current_index], this.element[this.element_array[this.current_index]]];
+                        this.current_index++;
+                        return a
+                    }
+                    return false
+                }
+            }, random_value: function (a) {
+                return a[_wm.array.random_value(_wm.object.keys(a))]
+            }, length: function (a) {
+                return _wm.object.keys(a).length
+            }
+        }, ua: {
+            initialize: function () {
+                this.maps = {
+                    browser: {
+                        oldsafari: {
+                            major: {'1': ['/8', '/1', '/3'], '2': '/4', '?': '/'},
+                            version: {
+                                '1.0': '/8',
+                                '1.2': '/1',
+                                '1.3': '/3',
+                                '2.0': '/412',
+                                '2.0.2': '/416',
+                                '2.0.3': '/417',
+                                '2.0.4': '/419',
+                                '?': '/'
+                            }
+                        }
+                    },
+                    os: {
+                        windows: {
+                            version: {
+                                'ME': '4.90',
+                                'NT 3.11': 'NT3.51',
+                                'NT 4.0': 'NT4.0',
+                                '2000': 'NT 5.0',
+                                'XP': ['NT 5.1', 'NT 5.2'],
+                                'Vista': 'NT 6.0',
+                                '7': 'NT 6.1',
+                                '8': 'NT 6.2',
+                                '8.1': 'NT 6.3',
+                                'RT': 'ARM'
+                            }
+                        }
+                    }
+                };
+                this.regexes = {
+                    browser: [[/(opera\smini)\/((\d+)?[\w\.-]+)/i, /(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i, /(opera).+version\/((\d+)?[\w\.]+)/i, /(opera)[\/\s]+((\d+)?[\w\.]+)/i], ['name', 'version', 'major'], [/\s(opr)\/((\d+)?[\w\.]+)/i], [['name', 'Opera'], 'version', 'major'], [/(kindle)\/((\d+)?[\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)*/i, /(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?((\d+)?[\w\.]*)/i, /(?:ms|\()(ie)\s((\d+)?[\w\.]+)/i, /(rekonq)((?:\/)[\w\.]+)*/i, /(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron)\/((\d+)?[\w\.-]+)/i], ['name', 'version', 'major'], [/(trident).+rv[:\s]((\d+)?[\w\.]+).+like\sgecko/i], [['name', 'IE'], 'version', 'major'], [/(yabrowser)\/((\d+)?[\w\.]+)/i], [['name', 'Yandex'], 'version', 'major'], [/(comodo_dragon)\/((\d+)?[\w\.]+)/i], [['name', /_/g, ' '], 'version', 'major'], [/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i], ['name', 'version', 'major'], [/(dolfin)\/((\d+)?[\w\.]+)/i], [['name', 'Dolphin'], 'version', 'major'], [/((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i], [['name', 'Chrome'], 'version', 'major'], [/version\/((\d+)?[\w\.]+).+?mobile\/\w+\s(safari)/i], ['version', 'major', ['name', 'Mobile Safari']], [/version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i], ['version', 'major', 'name'], [/webkit.+?(mobile\s?safari|safari)((\/[\w\.]+))/i], ['name', ['major', _wm.ua.mapper.str, _wm.ua.maps.browser.oldsafari.major], ['version', _wm.ua.mapper.str, _wm.ua.maps.browser.oldsafari.version]], [/(konqueror)\/((\d+)?[\w\.]+)/i, /(webkit|khtml)\/((\d+)?[\w\.]+)/i], ['name', 'version', 'major'], [/(navigator|netscape)\/((\d+)?[\w\.-]+)/i], [['name', 'Netscape'], 'version', 'major'], [/(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo\sbrowser|minimo|conkeror)[\/\s]?((\d+)?[\w\.\+]+)/i, /(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i, /(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i, /(uc\s?browser|polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|qqbrowser)[\/\s]?((\d+)?[\w\.]+)/i, /(links)\s\(((\d+)?[\w\.]+)/i, /(gobrowser)\/?((\d+)?[\w\.]+)*/i, /(ice\s?browser)\/v?((\d+)?[\w\._]+)/i, /(mosaic)[\/\s]((\d+)?[\w\.]+)/i], ['name', 'version', 'major']],
+                    os: [[/(windows)\snt\s6\.2;\s(arm)/i, /(windows\sphone(?:\sos)*|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i], ['name', ['version', _wm.ua.mapper.str, _wm.ua.maps.os.windows.version]], [/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i], [['name', 'Windows'], ['version', _wm.ua.mapper.str, _wm.ua.maps.os.windows.version]], [/\((bb)(10);/i], [['name', 'BlackBerry'], 'version'], [/(blackberry)\w*\/?([\w\.]+)*/i, /(tizen)\/([\w\.]+)/i, /(android|webos|palm\os|qnx|bada|rim\stablet\sos|meego)[\/\s-]?([\w\.]+)*/i], ['name', 'version'], [/(symbian\s?os|symbos|s60(?=;))[\/\s-]?([\w\.]+)*/i], [['name', 'Symbian'], 'version'], [/mozilla.+\(mobile;.+gecko.+firefox/i], [['name', 'Firefox OS'], 'version'], [/(nintendo|playstation)\s([wids3portablevu]+)/i, /(mint)[\/\s\(]?(\w+)*/i, /(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk)[\/\s-]?([\w\.-]+)*/i, /(hurd|linux)\s?([\w\.]+)*/i, /(gnu)\s?([\w\.]+)*/i], ['name', 'version'], [/(cros)\s[\w]+\s([\w\.]+\w)/i], [['name', 'Chromium OS'], 'version'], [/(sunos)\s?([\w\.]+\d)*/i], [['name', 'Solaris'], 'version'], [/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]+)*/i], ['name', 'version'], [/(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i], [['name', 'iOS'], ['version', /_/g, '.']], [/(mac\sos\sx)\s?([\w\s\.]+\w)*/i], ['name', ['version', /_/g, '.']], [/(haiku)\s(\w+)/i, /(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i, /(macintosh|mac(?=_powerpc)|plan\s9|minix|beos|os\/2|amigaos|morphos|risc\sos)/i, /(unix)\s?([\w\.]+)*/i], ['name', 'version']]
+                }, this.browser = this.get.browser();
+                this.os = this.get.os()
+            },
+            ua: (window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : '',
+            get: {
+                browser: function () {
+                    return _wm.ua.mapper.rgx.apply(this, _wm.ua.regexes.browser)
+                }, os: function () {
+                    return _wm.ua.mapper.rgx.apply(this, _wm.ua.regexes.os)
+                }
+            },
+            util: {
+                has: function (a, b) {
+                    return b.toLowerCase().indexOf(a.toLowerCase()) !== -1
+                }, lowerize: function (a) {
+                    return a.toLowerCase()
+                }
+            },
+            mapper: {
+                rgx: function () {
+                    for (var a, i = 0, j, k, p, q, matches, match, args = arguments; i < args.length; i += 2) {
+                        var b = args[i], props = args[i + 1];
+                        if (typeof(a) === 'undefined') {
+                            a = {};
+                            for (p in props) {
+                                q = props[p];
+                                if (typeof(q) === 'object') {
+                                    a[q[0]] = undefined
+                                } else {
+                                    a[q] = undefined
+                                }
+                            }
+                        }
+                        for (j = k = 0; j < b.length; j++) {
+                            matches = b[j].exec(_wm.ua.ua);
+                            if (!!matches) {
+                                for (p = 0; p < props.length; p++) {
+                                    match = matches[++k];
+                                    q = props[p];
+                                    if (typeof(q) === 'object' && q.length > 0) {
+                                        if (q.length == 2) {
+                                            if (typeof(q[1]) == 'function') {
+                                                a[q[0]] = q[1].call(this, match)
+                                            } else {
+                                                a[q[0]] = q[1]
+                                            }
+                                        } else if (q.length == 3) {
+                                            if (typeof(q[1]) === 'function' && !(q[1].exec && q[1].test)) {
+                                                a[q[0]] = match ? q[1].call(this, match, q[2]) : undefined
+                                            } else {
+                                                a[q[0]] = match ? match.replace(q[1], q[2]) : undefined
+                                            }
+                                        } else if (q.length == 4) {
+                                            a[q[0]] = match ? q[3].call(this, match.replace(q[1], q[2])) : undefined
+                                        }
+                                    } else {
+                                        a[q] = match ? match : undefined
+                                    }
+                                }
+                                break
+                            }
+                        }
+                        if (!!matches) break
+                    }
+                    return a
+                }, str: function (a, b) {
+                    for (var i in b) {
+                        if (typeof(b[i]) === 'object' && b[i].length > 0) {
+                            for (var j = 0; j < b[i].length; j++) {
+                                if (_wm.ua.util.has(b[i][j], a)) {
+                                    return (i === '?') ? undefined : i
+                                }
+                            }
+                        } else if (_wm.ua.util.has(b[i], a)) {
+                            return (i === '?') ? undefined : i
+                        }
+                    }
+                    return a
+                }
+            }
+        }, cookie: {
+            get: function (a, b) {
+                var c = new Date();
+                c.setTime(c.getTime());
+                var d = new Date(c.getTime() + (1000 * 60 * 60 * b)).toGMTString();
+                var e = document.cookie.split(';');
+                var f = '';
+                var g = '';
+                var h = [0, d];
+                for (var i = 0; i < e.length; i++) {
+                    f = e[i].split('=');
+                    g = f[0].replace(/^\s+|\s+$/g, '');
+                    if (g == a) {
+                        b_cookie_found = true;
+                        if (f.length > 1) {
+                            h = unescape(f[1]).split('|');
+                            if (h.length == 1) h[1] = d
+                        }
+                        return h
+                    }
+                    f = null;
+                    g = ''
+                }
+                return h
+            }, set: function (a, b, c) {
+                document.cookie = a + '=' + escape(b + '|' + c) + ';expires=' + c + ';path=/'
+            }
+        }, listener: {
+            events: [], add: function (a, b, c, e) {
+                if (e == undefined) e = true;
+                var d = 'on' + b;
+                if (typeof a.addEventListener != 'undefined') a.addEventListener(b, c, e); else if (typeof a.attachEvent != 'undefined') a.attachEvent(d, c); else {
+                    if (typeof a[d] != 'function') a[d] = c; else {
+                        var e = a[d];
+                        a['old_' + d] = e;
+                        a[d] = function () {
+                            e();
+                            return c()
+                        }
+                    }
+                }
+                _wm.listener.events.push(arguments)
+            }, remove: function (a, b, c, e) {
+                if (e == undefined) e = true;
+                var d = 'on' + b;
+                if (typeof a.removeEventListener != 'undefined') a.removeEventListener(b, c, e); else if (typeof a.detachEvent != 'undefined') a.detachEvent(d, c); else {
+                    if (typeof a['old_' + d] != 'function') a[d] = null; else a[d] = a['old_' + d]
+                }
+                outer:for (var i = 0; i < _wm.listener.events.length; i++) {
+                    inner:for (var j = 0; j < _wm.listener.events[i].length; j++) {
+                        if (_wm.listener.events[i][j] !== arguments[j]) continue outer
+                    }
+                    _wm.listener.events = _wm.listener.events.slice(0, i).concat(_wm.listener.events.slice(i + 1));
+                    break outer
+                }
+            }, clear: function () {
+                while (_wm.listener.events.length > 0) _wm.listener.remove.apply(undefined, _wm.listener.events[0])
+            }
+        }, format: {}, random: function () {
+            return Math.floor(Math.random() * 1000001)
+        }
+    };
+    _wm.initialize();
+    _wm.format.popunder = {
+        settings: typeof _wm_settings === 'object' && _wm_settings.popunder || false,
+        config: 'width=' + screen.width + ', height=' + screen.height + ',resizable=no,toolbar=no,location=no,directories=no,status=no,menubar=no,copyhistory=no,scrollbars=yes',
+        isBinded: false,
+        isTriggered: false,
+        trigger_stack: [],
+        initialize: function () {
+            if (!_wm.format.popunder.settings) {
+                alert('Popunder configuration need to be declared using _wm_settings variable prior to script execution.');
+                return
+            }
+            var a = _wm.cookie.get(_wm.format.popunder.settings.cookie, _wm.format.popunder.settings.hours);
+            this.cookie = {};
+            this.cookie.times = !isNaN(Number(a[0])) ? Number(a[0]) : 0;
+            this.cookie.expires = !isNaN(Date.parse(a[1])) ? a[1] : new Date().toGMTString();
+            if (_wm.format.popunder.settings.fastbind) _wm.format.popunder.handler.bind(); else {
+                if (document.readyState == 'complete') _wm.format.popunder.handler.bind(); else {
+                    _wm.listener.add(document, 'DOMContentLoaded', function () {
+                        _wm.listener.remove(document, 'DOMContentLoaded');
+                        _wm.format.popunder.handler.bind()
+                    });
+                    _wm.listener.add(document, 'onreadystatechange', function () {
+                        if (document.readyState == 'complete') {
+                            _wm.listener.remove(document, 'onreadystatechange');
+                            _wm.format.popunder.handler.bind()
+                        }
+                    });
+                    _wm.listener.add(window, 'load', _wm.format.popunder.handler.bind)
+                }
+            }
+        },
+        url: function () {
+            var a = _wm.format.popunder.settings.url;
+            if (typeof a == 'string') return a;
+            if (_wm.array.is_array(a)) return _wm.array.random_value(a);
+            if ((_wm.object.is_object(a) && !_wm.format.popunder.settings.hours)) return _wm.object.random_value(a);
+            if (_wm.object.is_object(a)) {
+                if (a[_wm.format.popunder.cookie.times] != undefined) return a[_wm.format.popunder.cookie.times]; else return _wm.object.random_value(a)
+            }
+            return null
+        },
+        handler: {
+            bind: function () {
+                if (_wm.format.popunder.isBinded) return;
+                _wm.format.popunder.isBinded = true;
+                if (_wm.format.popunder.cookie.times >= _wm.format.popunder.settings.times && _wm.format.popunder.settings.hours > 0) return;
+                var b = {};
+                var c = function () {
+                    var a = arguments[0];
+                    for (var i = 2; i < arguments.length; i++) {
+                        if (i % 2) arguments[i] = arguments[i] + '.0';
+                        if (!a.hasOwnProperty(arguments[i]) && i < arguments.length - 1) a[arguments[i]] = {};
+                        if (i == arguments.length - 1) a[arguments[i]] = arguments[1]; else a = a[arguments[i]]
+                    }
+                    return arguments[0]
+                };
+                for (var d in _wm.format.popunder.callback.binder) {
+                    if (!_wm.format.popunder.callback.binder.hasOwnProperty(d)) continue;
+                    var e = _wm.format.popunder.callback.binder[d];
+                    var f = d.split(',');
+                    for (var g in f) {
+                        if (!f.hasOwnProperty(g)) continue;
+                        var h = f[g].split(':');
+                        var j = h.length == 1 ? ['all', 0].concat(h[0].split('_')) : (h[0].indexOf('_') != -1 ? h[0].split('_') : h[0].split('_').concat([0])).concat(h[1].split('_'));
+                        if (j.length == 3) j.push(0);
+                        b = c.apply(null, [b, e].concat(j))
+                    }
+                }
+                b = _wm.object.sort(b, true, true);
+                var k = {};
+                var l = [_wm.ua.os.name.toLowerCase().split(' ').shift(), parseInt(_wm.ua.os.version) || 0, _wm.ua.browser.name.toLowerCase().split(' ').shift(), parseInt(_wm.ua.browser.major) || 0];
+                var m = [], trace_values = [];
+                var n = b;
+                for (var i = 0; i >= 0 && i < l.length; i++) {
+                    var o = (trace_values.length > 0 ? trace_values.join(':') + ':' : '') + '' + i;
+                    if (k[o]) {
+                        var p = k[o]
+                    } else {
+                        var p = new _wm.object.iterator(n);
+                        k[o] = p
+                    }
+                    var q = false;
+                    while (p.hasNext()) {
+                        var r = p.next();
+                        if ((i % 2 && r[0] <= parseFloat(l[i])) || (i % 2 == 0 && (r[0] == l[i]) || r[0] === 'all')) {
+                            q = r[0];
+                            break
+                        }
+                    }
+                    if (q) {
+                        m.push(n);
+                        trace_values.push(q);
+                        n = n[q]
+                    } else {
+                        trace_values.pop();
+                        n = m.pop();
+                        i -= 2
+                    }
+                }
+                if (typeof n === 'function') n()
+            }, trigger: function (e) {
+                if (_wm.ua.browser.name.toLowerCase() !== 'ie' || _wm.ua.browser.major > 8) e.stopImmediatePropagation();
+                _wm.listener.clear();
+                if (!_wm.format.popunder.registerTrigger()) return;
+                var a;
+                while (a = _wm.format.popunder.trigger_stack.shift()) _wm.format.popunder.callback.trigger[a.shift()].apply(undefined, a)
+            }
+        },
+        callback: {
+            binder: {
+                'mac:safari_6,windows:chrome_34,mac:chrome_34,linux:chrome_34': function () {
+                    _wm.format.popunder.trigger_stack.push(['tab_trigger']);
+                    _wm.listener.add(document, 'click', _wm.format.popunder.handler.trigger);
+                    _wm.format.popunder.occupy()
+                }, 'windows:chrome_31,mac:chrome_31,linux:chrome_31': function () {
+                    _wm.format.popunder.trigger_stack.push(['flash_trigger']);
+                    _wm.listener.add(document, 'click', _wm.format.popunder.handler.trigger);
+                    _wm.format.popunder.occupy()
+                }, 'windows:chrome_28,mac:chrome_28,linux:chrome_28': function () {
+                    _wm.format.popunder.trigger_stack.push(['triple_trigger']);
+                    _wm.listener.add(document, 'click', _wm.format.popunder.handler.trigger);
+                    _wm.format.popunder.occupy()
+                }, 'firefox_12,chrome_21': function () {
+                    _wm.format.popunder.trigger_stack.push(['double_trigger']);
+                    _wm.listener.add(document, 'click', _wm.format.popunder.handler.trigger);
+                    _wm.format.popunder.occupy()
+                }, 'explorer': function () {
+                    _wm.format.popunder.trigger_stack.push(['single_delay']);
+                    _wm.listener.add(document, 'click', _wm.format.popunder.handler.trigger);
+                    _wm.format.popunder.occupy()
+                }, 'android:all,ios:all': function () {
+                    _wm.format.popunder.trigger_stack.push(['single']);
+                    _wm.listener.add(document, 'touchend', _wm.format.popunder.handler.trigger);
+                    _wm.listener.add(document, 'touchcancel', _wm.format.popunder.handler.trigger);
+                    _wm.format.popunder.occupy()
+                }, 'windows:iemobile': function () {
+                    _wm.format.popunder.trigger_stack.push(['single']);
+                    _wm.listener.add(document, 'click', _wm.format.popunder.handler.trigger);
+                    _wm.format.popunder.occupy()
+                }, 'all': function () {
+                    _wm.format.popunder.trigger_stack.push(['single']);
+                    _wm.listener.add(document, 'click', _wm.format.popunder.handler.trigger);
+                    _wm.format.popunder.occupy()
+                }
+            }, trigger: {
+                flash_trigger: function () {
+                    var d = document.createElement('div');
+                    document.body.appendChild(d);
+                    d.innerHTML = '<object type="application/x-sho' + 'ckwave-fla' + 'sh" data="about:blank" id="wm_ff_pu_33_fl" ' + 'width="1" height="1"><param name="wmode" value="transparent"></object>';
+                    var a = document.getElementById('wm_ff_pu_33_fl');
+                    a.focus();
+                    a.style.display = 'none';
+                    window.open(_wm.format.popunder.url(), 'pu_' + _wm.random(), _wm.format.popunder.config);
+                    window.open('').close()
+                }, tab_trigger: function () {
+                    var a = document.createElement('a');
+                    a.href = _wm.format.popunder.url();
+                    a.setAttribute('target', '_blank');
+                    top.window.document.body.appendChild(a);
+                    var e = document.createEvent('MouseEvents');
+                    e.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null);
+                    a.dispatchEvent(e)
+                }, triple_trigger: function () {
+                    window.open('javascript:window.focus()', '_self');
+                    var w = window.open('about:blank', 'pu_' + _wm.random(), _wm.format.popunder.config);
+                    var a = document.createElement('a');
+                    a.setAttribute('href', 'data:text/html,<scr' + 'ipt>window.close();</scr' + 'ipt>');
+                    a.style.display = 'none';
+                    document.body.appendChild(a);
+                    var e = document.createEvent('MouseEvents');
+                    e.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null);
+                    a.dispatchEvent(e);
+                    document.body.removeChild(a);
+                    w.document.open().write('<scr' + 'ipt type="text/javascript">window.location="' + _wm.format.popunder.url() + '";<\/scr' + 'ipt>');
+                    w.document.close()
+                }, double_trigger: function () {
+                    var w = window.open(_wm.format.popunder.url(), 'pu_' + _wm.random(), _wm.format.popunder.config);
+                    if (w) {
+                        w.blur();
+                        try {
+                            var b = w.window.open('about:blank');
+                            b.close()
+                        } catch (i) {
+                        }
+                        if (_wm.ua.browser == 'Firefox') window.showModalDialog("javascript:window.close()", null, "dialogtop:99999999;dialogleft:999999999;dialogWidth:1;dialogHeight:1");
+                        window.focus()
+                    }
+                }, single_delay: function () {
+                    var w = window.open(_wm.format.popunder.url(), 'pu_' + _wm.random(), _wm.format.popunder.config);
+                    window.setTimeout(window.focus, 750);
+                    window.setTimeout(window.focus, 850);
+                    if (w) w.blur()
+                }, single: function (a) {
+                    var w = window.open(_wm.format.popunder.url(), 'pu_' + _wm.random(), _wm.format.popunder.config);
+                    if (w) {
+                        w.blur();
+                        window.focus()
+                    }
+                },
+            }
+        },
+        occupy: function (a) {
+            if (!a) {
+                a = ['mousedown', 'mouseup']
+            }
+            for (var i = 0; i < a.length; i++) {
+                _wm.listener.add(document, a[i], function (e) {
+                    if (_wm.ua.browser.name.toLowerCase() !== 'ie' || _wm.ua.browser.major > 8) e.stopImmediatePropagation()
+                })
+            }
+        },
+        registerTrigger: function () {
+            if (_wm.format.popunder.isTriggered) return false;
+            _wm.format.popunder.isTriggered = true;
+            if (_wm.format.popunder.settings.hours > 0) _wm.cookie.set(_wm.format.popunder.settings.cookie, ++_wm.format.popunder.cookie.times, _wm.format.popunder.cookie.expires);
+            return true
+        }
+    };
+    (function () {
+        _wm.format.popunder.initialize()
+    })();
+</script>
+<script type="text/javascript" src="//traffic.adxprtz.com/ads/ads.js"></script>
+<script type="text/javascript"> if (typeof asjdebsbnhjx === 'undefined') {
+    B8pH0aiCTG();
+}</script>
+
+</body>
+</html>
