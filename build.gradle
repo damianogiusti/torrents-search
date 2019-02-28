@@ -32,9 +32,7 @@ compileTestKotlin {
 }
 
 task fatJar(type: Jar) {
-    from {
-        // Add runtime dependencies to jar.
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
+    // Add runtime dependencies to jar.
+    from configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     with jar
 }
